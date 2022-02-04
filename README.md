@@ -1,2 +1,2 @@
-# LineTest
+# GeometricLineTest
 Line test solution
