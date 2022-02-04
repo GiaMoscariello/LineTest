@@ -1,12 +1,11 @@
 package model;
 
-import lombok.EqualsAndHashCode;
 import lombok.Value;
 
-@EqualsAndHashCode(callSuper = true)
 @Value
-public class ExplicitLine extends GeometricLine {
-    Double m, q;
+public class ExplicitLine implements GeometricLine {
+    Double m;
+    Double q;
 
     @Override
     public Double angularCoefficient() {

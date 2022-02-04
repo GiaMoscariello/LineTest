@@ -1,13 +1,13 @@
 package model;
 
-public abstract class GeometricLine {
-    public abstract Double angularCoefficient();
+public interface GeometricLine {
+    Double angularCoefficient();
 
-    public boolean isParallelWith(GeometricLine line ) {
+    default boolean isParallelWith(GeometricLine line) {
         return line.angularCoefficient().equals(angularCoefficient());
     }
 
-    public boolean isPerpendicularWith(GeometricLine line ) {
-        return  (line.angularCoefficient() * angularCoefficient()) == ((double) - 1);
+    default boolean isPerpendicularWith(GeometricLine line) {
+        return (line.angularCoefficient() * angularCoefficient()) == (-1.00);
     }
 }

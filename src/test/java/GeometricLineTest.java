@@ -32,14 +32,14 @@ public class GeometricLineTest {
     @Test
     public void pointsLineHasAngularCoeff() {
         Double expected =  2.00;
-        GeometricLine actualLine = new PointsLine(5.00, 12.00, 2.00);
+        GeometricLine actualLine = new PointLine(5.00, 12.00, 2.00);
 
         assert(expected.equals(actualLine.angularCoefficient()));
     }
 
     @Test
     public void cantCalculateAngularCoeff() {
-        GeometricLine actualLine = new PointsLine(5.00, 12.00, null);
+        GeometricLine actualLine = new PointLine(5.00, 12.00, null);
 
         assert(actualLine.angularCoefficient().equals(Double.NaN));
     }
