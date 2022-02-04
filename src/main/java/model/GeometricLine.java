@@ -8,6 +8,6 @@ public interface GeometricLine {
     }
 
     default boolean isPerpendicularWith(GeometricLine line) {
-        return (line.angularCoefficient() * angularCoefficient()) == (-1.00);
+        return (line.angularCoefficient() * angularCoefficient()) == -1.00;
     }
 }
