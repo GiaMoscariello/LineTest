@@ -1,4 +1,4 @@
-package model;
+package it.dove.model;
 
 import lombok.Value;
 

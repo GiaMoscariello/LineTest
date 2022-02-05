@@ -1,4 +1,4 @@
-package model;
+package it.dove.model;
 
 import lombok.Value;
 
@@ -25,6 +25,6 @@ public class ImplicitLine implements GeometricLine {
     public BigDecimal angularCoefficient() throws NumberFormatException {
         if (BigDecimal.ZERO.equals(b))
             return BigDecimal.valueOf(Double.POSITIVE_INFINITY);
-        else return (a.divide(b, RoundingMode.HALF_UP)).multiply(BigDecimal.valueOf(- 1.00)).stripTrailingZeros();
+        else return (a.divide(b, RoundingMode.HALF_UP)).multiply(BigDecimal.valueOf(-1)).stripTrailingZeros();
     }
 }
