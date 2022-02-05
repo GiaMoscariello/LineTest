@@ -3,14 +3,16 @@ package model;
 
 import lombok.Value;
 
+import java.math.BigDecimal;
+
 @Value
 public class PointLine implements GeometricLine {
-    Double x;
-    Double y;
-    Double m;
+    BigDecimal x;
+    BigDecimal y;
+    BigDecimal m;
 
     @Override
-    public Double angularCoefficient() {
-        return m == null ? Double.NaN : m;
+    public BigDecimal angularCoefficient() throws NumberFormatException {
+        return m == null ? BigDecimal.valueOf(Double.NaN) : m;
     }
 }

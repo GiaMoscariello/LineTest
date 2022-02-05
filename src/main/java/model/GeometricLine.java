@@ -1,13 +1,16 @@
 package model;
 
+import java.math.BigDecimal;
+
 public interface GeometricLine {
-    Double angularCoefficient();
+    BigDecimal angularCoefficient() throws NumberFormatException;
 
     default boolean isParallelWith(GeometricLine line) {
-        return line.angularCoefficient().equals(angularCoefficient());
+        return line.angularCoefficient().stripTrailingZeros()
+                .equals(angularCoefficient().stripTrailingZeros());
     }
 
     default boolean isPerpendicularWith(GeometricLine line) {
-        return (line.angularCoefficient() * angularCoefficient()) == -1.00;
+        return this.angularCoefficient().multiply(line.angularCoefficient()).intValue() == -1;
     }
 }

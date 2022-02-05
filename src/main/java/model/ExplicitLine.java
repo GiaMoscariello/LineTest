@@ -2,13 +2,15 @@ package model;
 
 import lombok.Value;
 
+import java.math.BigDecimal;
+
 @Value
 public class ExplicitLine implements GeometricLine {
-    Double m;
-    Double q;
+    BigDecimal m;
+    BigDecimal q;
 
     @Override
-    public Double angularCoefficient() {
-        return m;
+    public BigDecimal angularCoefficient() throws NumberFormatException {
+        return m.stripTrailingZeros();
     }
 }
