@@ -1,5 +1,4 @@
-package model;
-
+package it.dove.model;
 
 import lombok.Value;
 
@@ -7,8 +6,7 @@ import java.math.BigDecimal;
 
 @Value
 public class PointLine implements GeometricLine {
-    BigDecimal x;
-    BigDecimal y;
+    PointBigDecimal point;
     BigDecimal m;
 
     @Override
