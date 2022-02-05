@@ -1,7 +1,6 @@
 
 import model.*;
 import org.junit.Test;
-import org.junit.function.ThrowingRunnable;
 
 import java.math.BigDecimal;
 
@@ -22,7 +21,7 @@ public class GeometricLineTest {
     }
 
     @Test
-    public void implicitLineWithCoefficentsZerosShouldFail() {
+    public void implicitLineWithCoefficientsZeroShouldFail() {
         BigDecimal a = BigDecimal.ZERO;
         BigDecimal b = BigDecimal.ZERO;
         BigDecimal c = BigDecimal.valueOf(1);
